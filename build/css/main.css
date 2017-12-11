@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic");
+.navbar-light .navbar-nav .nav-link {
+  color: #212121;
+  padding: 10px 20px 10px 20px; }
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #212121;
+    background: #F4F4F4;
+    -webkit-border-radius: 3px;
+            border-radius: 3px; }
+
+.top_menu__list {
+  margin: 3px 0 3px 0; }
+
+.top_menu__item {
+  padding-left: 35px;
+  font-size: 14px;
+  letter-spacing: 1.1px; }
+
+.top_menu__item-link {
+  color: #757575; }
+  .top_menu__item-link:hover {
+    color: #292929;
+    text-decoration: none; }
+
+.main_menu {
+  height: 100px;
+  background-color: white !important; }
+  .main_menu__logo-img {
+    width: 170px; }
+  .main_menu__logo-text {
+    color: #212121;
+    margin-left: 20px;
+    font-size: 16px;
+    letter-spacing: 1.1; }
+  .main_menu__nav-item {
+    padding-right: 15px;
+    font-size: 21px;
+    letter-spacing: 1.1;
+    font-weight: 500; }
+    .main_menu__nav-item-icon {
+      width: 20px;
+      margin-right: 10px;
+      margin-bottom: 3px; }
+  .main_menu__nav-dropcat {
+    width: 50rem;
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-border-top-left-radius: 0;
+            border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+            border-top-right-radius: 0;
+    margin-top: 24px;
+    margin-left: -100px;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1); }
+    @media (min-width: 1400px) {
+      .main_menu__nav-dropcat {
+        width: 60rem; } }
+    .main_menu__nav-dropcat-header {
+      font-size: 18px;
+      font-weight: 400;
+      color: #212121; }
+    .main_menu__nav-dropcat-link {
+      color: #757575;
+      white-space: pre-wrap;
+      font-weight: 500; }
+      .main_menu__nav-dropcat-link:hover {
+        background: none;
+        color: #03A9F4; }
+  .main_menu__search {
+    width: 145px; }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px; } }
+
+body {
+  font-family: 'Roboto';
+  background: #E2F6FF; }

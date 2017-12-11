@@ -1,0 +1,84 @@
+//replace bootstrap style
+.navbar-light .navbar-nav .nav-link {
+    color: $color-black;
+    padding: 10px 20px 10px 20px;
+    &:hover {
+        color: $color-black;
+        background: #F4F4F4;
+        border-radius: 3px;
+    }
+}
+
+.top_menu {
+    &__list {
+        margin: 3px 0 3px 0;
+    }
+    &__item {
+        padding-left: 35px;
+        font-size: 14px;
+        letter-spacing: 1.1px;
+    }
+    &__item-link {
+        color: #757575;
+        &:hover {
+            color: darken(#757575, 30%);
+            text-decoration: none;
+        }
+    }
+}
+
+.main_menu {
+    height: 100px;
+    background-color: white !important;
+    &__logo-img {
+        width: 170px;
+    }
+    &__logo-text {
+        color: $color-black;
+        margin-left: 20px;
+        font-size: 16px;
+        letter-spacing: 1.1;
+    }
+    &__nav-item {
+        padding-right: 15px;
+        font-size: 21px;
+        letter-spacing: 1.1;
+        font-weight: 500;
+        &-link {}
+        &-icon {
+            width: 20px;
+            margin-right: 10px;
+            margin-bottom: 3px;
+        }
+    }
+    &__nav-dropcat {
+        width: 50rem;
+        @media (min-width: 1400px) {
+                width: 60rem;
+        }
+        font-size: 14px;
+        font-weight: 600;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-top: 24px;
+        margin-left: -100px;
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
+        &-header {
+            font-size: 18px;
+            font-weight: 400;
+            color: $color-black;
+        }
+        &-link {
+            color: $color-grey;
+            white-space: pre-wrap;
+            font-weight: 500;
+            &:hover {
+                background: none;
+                color: $color-lightblue;
+            }
+        }
+    }
+    &__search {
+        width: 145px;
+    }
+}

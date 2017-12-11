@@ -10,53 +10,83 @@
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-    <nav class="top_menu">
-    <ul>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Контакты</a></li>
-    </ul>
-</nav>
+    <div class="container">
+    <nav class="top_menu text-right">
+        <ul class="top_menu__list">
+            <li class="top_menu__item d-inline"><a class="top_menu__item-link" href="#">О нас</a></li>
+            <li class="top_menu__item d-inline"><a class="top_menu__item-link" href="#">Доставка</a></li>
+            <li class="top_menu__item d-inline"><a class="top_menu__item-link" href="#">Контакты</a></li>
+        </ul>
+    </nav>
+</div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="main_menu navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+            <img class="main_menu__logo-img" src="images/logo_img.svg" alt="">
         </a>
-        <span class="text_logo">Интернет-каталог <br> климатической техники</span>
+        <span class="main_menu__logo-text">Интернет-каталог <br> климатической техники</span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Каталог
-              </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+            <ul class="navbar-nav mx-auto ">
+                <li class="main_menu__nav-item nav-item dropdown">
+                    <a class="nav-link main_menu__nav-item-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="main_menu__nav-item-icon" src="images/view-list.svg" alt=""> Каталог
+                    </a>
+                    <div class="dropdown-menu border-0 main_menu__nav-dropcat" aria-labelledby="navbarDropdown">
+                        <h6 class="dropdown-header mt-3 main_menu__nav-dropcat-header">Кондиционеры</h6>
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Сплит-системы</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Мульти сплит-системы с инверторным управлением</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Кассетные сплит-системы</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Инверторные кондиционеры</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Кассетные сплит-системы</a>
+                            </div>
+                            <div class="col-xl-4">
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Инверторные кондиционеры</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Колонные сплит-системы</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Канальные сплит-системы</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Инверторные кондиционеры</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Канальные кондиционеры</a>
+                            </div>
+                            <div class="col-xl-4">
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Мобильные кондиционеры</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Напольно-потолочные сплит-системы</a>
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Кондиционеры АКЦИИ</a>
+                            </div>
+                        </div>
+                        <h6 class="dropdown-header mt-3 main_menu__nav-dropcat-header">Увлажнители / Осушители</h6>
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <a class="dropdown-item main_menu__nav-dropcat-link" href="#">Увлажнители и очистители воздуха</a>
+                            </div>
+                        </div>
                     </div>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Услуги</a>
+                <li class="main_menu__nav-item nav-item">
+                    <a class="main_menu__nav-item-link nav-link" href="#"><img class="main_menu__nav-item-icon" src="images/wrench.svg" alt=""> Услуги</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Как купить?</a>
+                <li class="main_menu__nav-item nav-item">
+                    <a class="nav-link" href="#"><img class="main_menu__nav-item-icon" src="images/cart.svg" alt=""> Как купить?</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Ключевое слово" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Искать</button>
+            <form class="form-inline main_menu__search my-2 my-lg-0">
+                <div class="input-group">
+                    <input type="text" class="form-control main_menu__search-input" placeholder="Search for..." aria-label="Search for...">
+                    <span class="input-group-btn">
+                              <button class="btn btn-secondary" type="button"><img width="20px" src="images/magnify.svg" alt=""></button>
+                            </span>
+                </div>
             </form>
         </div>
     </div>
@@ -66,7 +96,7 @@
     <div class="col-xl-9">
         <div class="row">
             <div class="col-xl-12">
-                <div class="card">
+                <div class="card border-0 mt-3">
                     <img class="card-img-top" src="https://placeimg.com/870/190/people" alt="">
                 </div>
             </div>
@@ -74,24 +104,24 @@
 
         <div class="row">
             <div class="col-xl-5">
-                <div class="card">
+                <div class="card border-0 mt-3">
                     <img class="card-img-top" src="https://placeimg.com/330/190/people" alt="">
                 </div>
             </div>
             <div class="col-xl-7">
-                <div class="card">
+                <div class="card border-0 mt-3">
                     <img class="card-img-top" src="https://placeimg.com/470/190/people" alt="">
                 </div>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-xl-12">
                 <div class="row">
                     <div class="col-xl-3">
-                        <div class="card">
+                        <div class="card border-0 p-2 ">
                             <div class="media">
-                                <img class="mr-3" src="https://placeimg.com/44/40/people" alt="Generic placeholder image">
+                                <img width="44" class="mr-3 mt-1" src="images/gift.svg">
                                 <div class="media-body">
                                     Подарочные сертификаты
                                 </div>
@@ -99,9 +129,9 @@
                         </div>
                     </div>
                     <div class="col-xl-3">
-                        <div class="card">
+                        <div class="card border-0 p-2">
                             <div class="media">
-                                <img class="mr-3" src="https://placeimg.com/44/40/people" alt="Generic placeholder image">
+                                <img width="32,73" class="mr-3 mt-1" src="images/verified.svg">
                                 <div class="media-body">
                                     Весь товар сертифицирован
                                 </div>
@@ -109,9 +139,9 @@
                         </div>
                     </div>
                     <div class="col-xl-3">
-                        <div class="card">
+                        <div class="card border-0 p-2">
                             <div class="media">
-                                <img class="mr-3" src="https://placeimg.com/44/40/people" alt="Generic placeholder image">
+                                <img width="42,11" class="mr-3 mt-1" src="images/loop.svg">
                                 <div class="media-body">
                                     30 дней на обмен и возврат
                                 </div>
@@ -119,9 +149,9 @@
                         </div>
                     </div>
                     <div class="col-xl-3">
-                        <div class="card">
-                            <div class="media">
-                                <img class="mr-3" src="https://placeimg.com/44/40/people" alt="Generic placeholder image">
+                        <div class="card border-0 p-2">
+                            <div class="media mt-auto">
+                                <img width="45" class="mr-3 mt-2" src="images/truck-fast.svg">
                                 <div class="media-body">
                                     Быстрая доставка
                                 </div>
@@ -133,15 +163,17 @@
         </div>
     </div>
     <div class="col-xl-3">
-        <div class="card">
+        <div class="card border-0 mt-3">
             <div class="card-body">
-                <span style="font-size: 24px">+7 (473) 2-600-600</span>
-                <span style="font-size: 24px">+7 (473) 2-600-600</span>
+                <p>
+                    <span style="font-size: 24px">+7 (473) 2-600-600</span>
+                    <span style="font-size: 24px">+7 (473) 2-600-600</span>
+                </p>
                 <button class="btn btn-primary float-right" type="submit">Заказать звонок</button>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card border-0 mt-3">
             <img class="card-img-top" src="https://placeimg.com/270/180/people/grayscale" alt="">
             <div class="card-body">
                 <b>Адрес: </b>
@@ -152,9 +184,9 @@
     </div>
 </div>
         <div class="row">
-    <div class="col-xl-12">
+    <div class="col-xl-12 mt-5">
         <h3>Сортировка товара</h3>
-        <div class="card">
+        <div class="card border-0 mt-3">
             <div class="card-body">
                 <div class="row">
                     <div class="col-xl-9">
@@ -170,7 +202,7 @@
     </div>
 </div>
         <div class="row">
-    <div class="col-xl-12">
+    <div class="col-xl-12 mt-5">
         <div class="row">
             <div class="col-xl-10">
                 <h3>Кондиционеры</h3>
@@ -182,70 +214,182 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xl-12">
+    <div class="col-xl-12 mt-3">
         <div class="row ">
             <div class="col-xl-3">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
-                        This is some text within a card body.
+                            <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
-                        This is some text within a card body.
+                            <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
-                        This is some text within a card body.
+                            <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
-                        This is some text within a card body.
+                            <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-        <div class="row">
+        <div class="row mt-5">
     <div class="col-xl-6">
         <h3>Акции</h3>
         <div class="row">
-            <div class="col-xl-12">
-                <div class="row ">
+            <div class="col-xl-12 mt-3">
+                <div class="row">
                     <div class="col-xl-6">
-                        <div class="card">
+                        <div class="card border-0">
                             <div class="card-body">
-                                This is some text within a card body.
+                                <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6">
-                        <div class="card">
+                        <div class="card border-0">
                             <div class="card-body">
-                                This is some text within a card body.
+                                <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="card">
+                    <div class="col-xl-6 mt-4">
+                        <div class="card border-0">
                             <div class="card-body">
-                                This is some text within a card body.
+                                <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="card">
+                    <div class="col-xl-6 mt-4">
+                        <div class="card border-0">
                             <div class="card-body">
-                                This is some text within a card body.
+                                <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                             </div>
                         </div>
                     </div>
@@ -257,33 +401,89 @@
     <div class="col-xl-6">
             <h3>Хиты продаж</h3>
             <div class="row">
-                <div class="col-xl-12">
-                    <div class="row ">
+                <div class="col-xl-12 mt-3">
+                    <div class="row">
                         <div class="col-xl-6">
-                            <div class="card">
+                            <div class="card border-0">
                                 <div class="card-body">
-                                    This is some text within a card body.
+                                    <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-6">
-                            <div class="card">
+                            <div class="card border-0">
                                 <div class="card-body">
-                                    This is some text within a card body.
+                                    <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6">
-                            <div class="card">
+                        <div class="col-xl-6 mt-4">
+                            <div class="card border-0">
                                 <div class="card-body">
-                                    This is some text within a card body.
+                                    <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6">
-                            <div class="card">
+                        <div class="col-xl-6 mt-4">
+                            <div class="card border-0">
                                 <div class="card-body">
-                                    This is some text within a card body.
+                                    <div class="px-3 border border-primary">
+    <img class="img-fluid img-thumbnail" src="https://placeimg.com/200/200/people" alt="">
+    <a href="#">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</a>
+    <div class="mt-1">
+        <img width="90" src="images/stars.svg" alt=""> <span class="badge badge-light">(10)</span> <span class="badge badge-light">(<a href="#">отзывы</a>)</span>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            35990 руб.
+        </div>
+        <div class="col-xl-4">
+                <a class="btn btn-primary btn-sm" href="#" role="button">заказать</a>
+        </div>
+    </div>
+</div>
                                 </div>
                             </div>
                         </div>
@@ -292,65 +492,62 @@
             </div>
         </div>
 </div>
-        <footer>
+        <footer class="mt-5">
     <div class="row position-relative">
         <div class="col-xl-12">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="row ">
                         <div class="col-xl-2">
-                            <div class="card">
+                            <div class="card border-0">
                                 <div class="card-body">
                                     <h6>Компания</h6>
                                     <nav class="nav flex-column">
-                                        <a class="nav-link active" href="#">Active</a>
-                                        <a class="nav-link" href="#">Link</a>
-                                        <a class="nav-link" href="#">Link</a>
-                                        <a class="nav-link disabled" href="#">Disabled</a>
+                                        <a class="nav-link" href="#">О компании</a>
+                                        <a class="nav-link" href="#">Новости</a>
                                     </nav>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3">
-                            <div class="card">
+                            <div class="card border-0">
                                 <div class="card-body">
                                     <h6>Информация</h6>
                                     <nav class="nav flex-column">
-                                        <a class="nav-link active" href="#">Active</a>
-                                        <a class="nav-link" href="#">Link</a>
-                                        <a class="nav-link" href="#">Link</a>
-                                        <a class="nav-link disabled" href="#">Disabled</a>
+                                        <a class="nav-link" href="#">Помощь</a>
+                                        <a class="nav-link" href="#">Условия оплаты</a>
+                                        <a class="nav-link" href="#">Описание процесса оплаты с помощью банковской карты</a>
+                                        <a class="nav-link" href="#">Условия доставки</a>
+                                        <a class="nav-link" href="#">Гарантия на товар</a>
                                     </nav>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-2">
-                            <div class="card">
+                            <div class="card border-0">
                                 <div class="card-body">
                                     <h6>Помощь</h6>
                                     <nav class="nav flex-column">
-                                        <a class="nav-link active" href="#">Active</a>
-                                        <a class="nav-link" href="#">Link</a>
-                                        <a class="nav-link" href="#">Link</a>
-                                        <a class="nav-link disabled" href="#">Disabled</a>
+                                        <a class="nav-link" href="#">Статьи</a>
+                                        <a class="nav-link" href="#">Производители</a>
                                     </nav>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-2">
-                            <div class="card">
+                            <div class="card border-0">
                                 <div class="card-body">
                                     <h6>Социальные</h6>
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col-xl-12">
                                             <div class="row">
-                                                <div class="col-xl-6"> <img class="mr-3" src="https://placeimg.com/44/40/people" alt="Generic placeholder image">
+                                                <div class="col-xl-6"> <img class="mr-3" src="images/vk.svg">
                                                 </div>
-                                                <div class="col-xl-6"> <img class="mr-3" src="https://placeimg.com/44/40/people" alt="Generic placeholder image">
+                                                <div class="col-xl-6"> <img class="mr-3" src="images/facebook.svg">
                                                 </div>
-                                                <div class="col-xl-6"> <img class="mr-3" src="https://placeimg.com/44/40/people" alt="Generic placeholder image">
+                                                <div class="col-xl-6"> <img class="mr-3 mt-2" src="images/instagram.svg">
                                                 </div>
-                                                <div class="col-xl-6"> <img class="mr-3" src="https://placeimg.com/44/40/people" alt="Generic placeholder image">
+                                                <div class="col-xl-6"> <img class="mr-3 mt-2" src="images/odnoklassniki.svg">
                                                 </div>
                                             </div>
                                         </div>
@@ -359,10 +556,12 @@
                             </div>
                         </div>
                         <div class="col-xl-3">
-                            <div class="card">
+                            <div class="card border-0">
                                 <div class="card-body">
-                                    <span style="font-size: 24px">+7 (473) 2-600-600</span>
-                                    <span style="font-size: 24px">+7 (473) 2-600-600</span>
+                                    <p>
+                                        <span style="font-size: 24px">+7 (473) 2-600-600</span>
+                                        <span style="font-size: 24px">+7 (473) 2-600-600</span>
+                                    </p>
                                     <b>Адрес: </b>
                                     <p>Россия, Воронежская область, Воронеж, ул. Острогожская, 73А</p>
                                 </div>

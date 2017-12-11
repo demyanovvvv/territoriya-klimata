@@ -1,6 +1,27 @@
-// @import "blocks/none-responsive";
+//fonts
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic');
+
+//colors
+$color-black: #212121;
+$color-blue: #0288D1;
+$color-yellow: #FFEB3B;
+$color-lightblue: #03A9F4;
+$color-grey: #757575;
+
+@import "blocks/header";
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+  }
 
 // footer {
 //     flex: 0 0 auto;
 //     height: 80px;
 // }
+
+body {
+    font-family: 'Roboto';
+    background: #E2F6FF;
+}
