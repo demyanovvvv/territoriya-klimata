@@ -1,0 +1,19 @@
+//colors site
+
+//vars
+$color-black: #212121;
+$color-blue: #0288D1;
+$color-yellow: #FFEB3B;
+$color-lightblue: #03A9F4;
+$color-grey: #757575;
+
+//bootstrap colors
+.btn-primary {
+    color: #fff;
+    background-color: $color-lightblue;
+    border-color: $color-lightblue;
+    &:hover {
+        background-color: darken($color-lightblue, 5%);
+        border-color: darken($color-lightblue, 5%);
+    }
+}

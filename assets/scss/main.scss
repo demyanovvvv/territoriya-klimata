@@ -1,14 +1,12 @@
 //fonts
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css');
 
-//colors
-$color-black: #212121;
-$color-blue: #0288D1;
-$color-yellow: #FFEB3B;
-$color-lightblue: #03A9F4;
-$color-grey: #757575;
-
+@import "blocks/colors"; //vars all colors
 @import "blocks/header";
+@import "blocks/offer_section";
+@import "blocks/sort_section";
+@import "blocks/catalog_section";
 
 @media (min-width: 1200px) {
     .container {

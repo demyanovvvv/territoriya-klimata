@@ -2,11 +2,22 @@
 .navbar-light .navbar-nav .nav-link {
     color: $color-black;
     padding: 10px 20px 10px 20px;
+    transition: all ease 0.4s;
     &:hover {
         color: $color-black;
         background: #F4F4F4;
         border-radius: 3px;
+        transition: all ease 0.4s;
     }
+    &:active,:focus {
+        color: $color-black;
+        background: #F4F4F4;
+        border-radius: 3px;
+    }
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    background: #F4F4F4;  
 }
 
 .top_menu {
@@ -57,7 +68,7 @@
                 width: 60rem;
         }
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 300;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         margin-top: 24px;
@@ -71,14 +82,74 @@
         &-link {
             color: $color-grey;
             white-space: pre-wrap;
-            font-weight: 500;
+            font-weight: 300;
+            line-height: 28px;
+            letter-spacing: 1.1;
             &:hover {
                 background: none;
+                color: $color-grey;
+
+            }
+            & span {
+                padding-bottom: 1px;
+                border-bottom: 1px solid rgba($color-grey, 0.1);
+                transition: all ease 0.4s; 
+            }
+            & span:hover {
                 color: $color-lightblue;
+                transition: all ease 0.5s; 
+                    border-bottom: 1px solid rgba($color-lightblue, 0.9);
             }
         }
     }
     &__search {
         width: 145px;
+        &-input {
+            height: 30px;
+            background: #F4F4F4;
+            border-right: none;
+            border: none;
+            transition: all ease 0.4s;
+            &::-webkit-input-placeholder {color:#BDBDBD;}
+            &::-webkit-input-placeholder {color:#BDBDBD;}
+            &::-moz-placeholder          {color:#BDBDBD;}
+            &:-moz-placeholder           {color:#BDBDBD;}
+            &:-ms-input-placeholder      {color:#BDBDBD;}
+            &:focus {
+                width: 200px;
+                margin-left: -94px;
+                background: #F4F4F4;
+                border-right: none;
+                border: none;
+                transition: all ease 0.4s;
+                box-shadow: none;
+            }
+        }
+        &-button {
+            height: 30px;
+            width: 40px;
+            color: $color-grey;
+            background: #F4F4F4;
+            border: none;
+            border-left: none;
+            &:hover {
+                color: $color-grey;
+                background: #F4F4F4;
+                border: none;
+                box-shadow: none;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            &-icon {
+                width: 20px;
+                cursor: pointer;
+                transition: all ease 0.4s;
+                &:hover {
+                    opacity: 0.7;
+                    transition: all ease 0.4s;
+                }
+            }
+        }
     }
 }
