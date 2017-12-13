@@ -19,7 +19,12 @@ gulp.task('build', function () {
         }))
 		.pipe(rename('css/main.css'))
     	.pipe(gulp.dest('build/'))
-    gulp.src('./assets/templates/*.html')
+	gulp.src('./assets/templates/*.html')
+		gulp.src(['./assets/templates/index.html'])
+			.pipe(fileinclude({
+				prefix: '@@',
+				basepath: './assets/templates/blocks/'
+			}))
 		.pipe(rename("index.html"))
 		.pipe(gulp.dest('build/'))
 	gulp.src('./assets/js/**/*.js')

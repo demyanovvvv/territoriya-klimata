@@ -7,23 +7,34 @@
         float: right;
         background: white;
         color: $color-lightblue;
-        border: 2px solid $color-lightblue;
-        transition: all ease 0.4s; 
+        border: 2px solid white;
+        transition: all ease 0.4s;
         & img {
             width: 18px;
             margin-left: 10px;
+            transition: all ease 0.8s;
         }
         &:hover {
             color: $color-lightblue;
             background: white;
             border: 2px solid $color-lightblue;
-            transition: all ease 0.8s; 
-            transform: translate(0, -4px);
+            transition: all ease 0.8s;
+            // transform: scale(1.1);
+        }
+        &:hover img {
+            transition: all ease 0.8s;
+            transform: rotateZ(180deg);
         }
     }
 }
 
 .cat-product {
+    transition: all ease 0.8s;
+    &:hover {
+        box-shadow: 0px 12px 36px rgba(#B3E5FC, 1);
+        transition: all ease 0.8s;
+        transform: translate(0, -2px);
+    }
     padding: 10px;
     &__inner {
         border: 5px solid #B3E5FC;
@@ -41,11 +52,92 @@
         display: block;
         height: 50px;
         word-break: normal;
-        transition: all ease 0.4s; 
+        transition: all ease 0.4s;
         &:hover {
             text-decoration: none;
-            color: $color-blue;
-            transition: all ease 0.8s; 
+            color: $color-black;
+            transition: all ease 0.8s;
         }
+    }
+    &__reviews {
+        margin: 10px 0 10px 0;
+        &-stars {
+            width: 90px;
+        }
+        &-num {
+            color: #BDBDBD;
+            font-weight: 600;
+            background: none;
+        }
+        &-link {
+            color: #BDBDBD;
+            margin-left: 13px;
+            background: none;
+        }
+        &-link a {
+            color: #BDBDBD;
+            font-weight: 600;
+        }
+    }
+    &__price {
+        font-size: 26px;
+        color: $color-grey;
+        display: inline;
+        &-link {
+            margin-top: 3px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        & span {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            opacity: 0;
+            background: $color-lightblue;
+            color: white;
+            padding: 5px 20px 5px 20px;
+            border-radius: 3px;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: all ease 0.4s;
+            &:hover {
+                opacity: 1;
+                transition: all ease 0.4s;
+            }
+        }
+    }
+    &__button {
+        margin-left: -20px;
+        padding-bottom: 10px;
+        &-call {
+            background: #F1FAFE;
+            color: $color-lightblue;
+            border: none;
+            font-size: 14px;
+            font-weight: 300;
+            opacity: 0.5;
+            transition: all ease 0.4s;
+            &:hover {
+                background: #F1FAFE;
+                color: $color-lightblue;
+                border: none;
+                opacity: 1;
+                transition: all ease 0.8s;
+            }
+            &-icon {
+                display: block;
+                margin: 0 auto;
+                background: url('/images/shopping.svg');
+                width: 15px;
+                height: 17.5px;
+            }
+        }
+    }
+}
+
+.cat-product-link {
+    &:hover {
+        text-decoration: none;
     }
 }

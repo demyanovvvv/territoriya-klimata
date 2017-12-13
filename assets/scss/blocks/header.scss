@@ -9,15 +9,19 @@
         border-radius: 3px;
         transition: all ease 0.4s;
     }
-    &:active,:focus {
+    &:active,
+     :focus {
         color: $color-black;
         background: #F4F4F4;
         border-radius: 3px;
     }
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    background: #F4F4F4;  
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    background: #F4F4F4;
 }
 
 .top_menu {
@@ -65,7 +69,7 @@
     &__nav-dropcat {
         width: 50rem;
         @media (min-width: 1400px) {
-                width: 60rem;
+            width: 60rem;
         }
         font-size: 14px;
         font-weight: 300;
@@ -75,8 +79,9 @@
         margin-left: -100px;
         box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
         &-header {
+            font-size: 'PT Sans', sans-serif;
             font-size: 18px;
-            font-weight: 400;
+            font-weight: bold;
             color: $color-black;
         }
         &-link {
@@ -88,17 +93,16 @@
             &:hover {
                 background: none;
                 color: $color-grey;
-
             }
             & span {
                 padding-bottom: 1px;
                 border-bottom: 1px solid rgba($color-grey, 0.1);
-                transition: all ease 0.4s; 
+                transition: all ease 0.4s;
             }
             & span:hover {
                 color: $color-lightblue;
-                transition: all ease 0.5s; 
-                    border-bottom: 1px solid rgba($color-lightblue, 0.9);
+                transition: all ease 0.5s;
+                border-bottom: 1px solid rgba($color-lightblue, 0.9);
             }
         }
     }
@@ -110,11 +114,22 @@
             border-right: none;
             border: none;
             transition: all ease 0.4s;
-            &::-webkit-input-placeholder {color:#BDBDBD;}
-            &::-webkit-input-placeholder {color:#BDBDBD;}
-            &::-moz-placeholder          {color:#BDBDBD;}
-            &:-moz-placeholder           {color:#BDBDBD;}
-            &:-ms-input-placeholder      {color:#BDBDBD;}
+            &::-webkit-input-placeholder {
+                color: #BDBDBD;
+                font-weight: 400;
+            }
+            &::-moz-placeholder {
+                color: #BDBDBD;
+                font-weight: 400;
+            }
+            &:-moz-placeholder {
+                color: #BDBDBD;
+                font-weight: 400;
+            }
+            &:-ms-input-placeholder {
+                color: #BDBDBD;
+                font-weight: 400;
+            }
             &:focus {
                 width: 200px;
                 margin-left: -94px;
@@ -123,6 +138,22 @@
                 border: none;
                 transition: all ease 0.4s;
                 box-shadow: none;
+                &::-webkit-input-placeholder {
+                    color: transparent;
+                    transition: all ease 0.4s;
+                }
+                &::-moz-placeholder {
+                    color: transparent;
+                    transition: all ease 0.4s;
+                }
+                &:-moz-placeholder {
+                    color: transparent;
+                    transition: all ease 0.4s;
+                }
+                &:-ms-input-placeholder {
+                    color: transparent;
+                    transition: all ease 0.4s;
+                }
             }
         }
         &-button {

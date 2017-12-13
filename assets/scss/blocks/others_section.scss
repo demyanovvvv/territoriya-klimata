@@ -1,0 +1,10 @@
+.other-section {
+    &__header-promo {
+        border-bottom: 10px solid $color-lightblue;
+        padding-bottom: 10px;
+    }
+    &__header-bestsellers {
+        border-bottom: 10px solid $color-yellow;
+        padding-bottom: 10px;
+    }
+}

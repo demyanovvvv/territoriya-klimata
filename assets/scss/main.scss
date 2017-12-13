@@ -7,6 +7,14 @@
 @import "blocks/offer_section";
 @import "blocks/sort_section";
 @import "blocks/catalog_section";
+@import "blocks/others_section";
+@import "blocks/footer";
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.1;
+}
 
 @media (min-width: 1200px) {
     .container {
