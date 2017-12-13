@@ -328,7 +328,13 @@
         -ms-transform: rotate(180deg);
             transform: rotateZ(180deg); }
 
+.cat-card {
+  background: none; }
+
 .cat-product {
+  background: white;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   -webkit-transition: all ease 0.8s;
   -o-transition: all ease 0.8s;
   transition: all ease 0.8s;
