@@ -52,12 +52,12 @@
         color: $color-black;
         margin-left: 20px;
         font-size: 16px;
-        letter-spacing: 1.1;
+        letter-spacing: 1.1px;
     }
     &__nav-item {
         padding-right: 15px;
         font-size: 21px;
-        letter-spacing: 1.1;
+        letter-spacing: 1.1px;
         font-weight: 500;
         &-link {}
         &-icon {
@@ -89,7 +89,7 @@
             white-space: pre-wrap;
             font-weight: 300;
             line-height: 28px;
-            letter-spacing: 1.1;
+            letter-spacing: 1.1px;
             &:hover {
                 background: none;
                 color: $color-grey;
@@ -176,6 +176,7 @@
                 width: 20px;
                 cursor: pointer;
                 transition: all ease 0.4s;
+                vertical-align: initial;
                 &:hover {
                     opacity: 0.7;
                     transition: all ease 0.4s;
