@@ -5,7 +5,6 @@ Description: Проверочный шаблон от beloweb
 Author: beloweb.ru
 Author URI: http://beloweb.ru/about
 */
-
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic");
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css");
 .btn-primary {
@@ -66,11 +65,11 @@ Author URI: http://beloweb.ru/about
     color: #212121;
     margin-left: 20px;
     font-size: 16px;
-    letter-spacing: 1.1; }
+    letter-spacing: 1.1px; }
   .main_menu__nav-item {
     padding-right: 15px;
     font-size: 21px;
-    letter-spacing: 1.1;
+    letter-spacing: 1.1px;
     font-weight: 500; }
     .main_menu__nav-item-icon {
       width: 20px;
@@ -101,7 +100,7 @@ Author URI: http://beloweb.ru/about
       white-space: pre-wrap;
       font-weight: 300;
       line-height: 28px;
-      letter-spacing: 1.1; }
+      letter-spacing: 1.1px; }
       .main_menu__nav-dropcat-link:hover {
         background: none;
         color: #757575; }
@@ -192,7 +191,7 @@ Author URI: http://beloweb.ru/about
         -webkit-transition: all ease 0.4s;
         -o-transition: all ease 0.4s;
         transition: all ease 0.4s;
-        vertical-align: none; }
+        vertical-align: initial; }
         .main_menu__search-button-icon:hover {
           opacity: 0.7;
           -webkit-transition: all ease 0.4s;
@@ -216,7 +215,7 @@ Author URI: http://beloweb.ru/about
     padding: 5px 10px 5px 10px;
     -webkit-border-radius: 3px;
             border-radius: 3px;
-    letter-spacing: 1.1; }
+    letter-spacing: 1.1px; }
   .offer-product:hover {
     -webkit-box-shadow: 0px 12px 36px rgba(33, 33, 33, 0.3);
             box-shadow: 0px 12px 36px rgba(33, 33, 33, 0.3);
@@ -240,13 +239,13 @@ Author URI: http://beloweb.ru/about
 .phone__number {
   color: #757575;
   font-size: 24px;
-  letter-spacing: 1.4;
+  letter-spacing: 1.4px;
   text-align: right; }
 
 .address__text {
   color: #757575;
   font-size: 14px;
-  letter-spacing: 1.1;
+  letter-spacing: 1.1px;
   line-height: 24px; }
 
 .form-sort__par {
@@ -299,7 +298,7 @@ Author URI: http://beloweb.ru/about
   border: 2px solid #03A9F4;
   color: #03A9F4;
   font-size: 35px;
-  letter-spacing: 1.5;
+  letter-spacing: 1.5px;
   position: relative;
   top: 28%;
   left: 14%; }
@@ -367,7 +366,7 @@ Author URI: http://beloweb.ru/about
   .cat-product__link {
     color: #03A9F4;
     font-size: 16px;
-    letter-spacing: 0.18;
+    letter-spacing: 0.18px;
     overflow: hidden;
     display: block;
     height: 50px;
@@ -477,7 +476,7 @@ Author URI: http://beloweb.ru/about
     color: #757575;
     white-space: pre-wrap;
     font-weight: 300;
-    letter-spacing: 1.1;
+    letter-spacing: 1.1px;
     padding-bottom: 1px;
     -webkit-transition: all ease 0.4s;
     -o-transition: all ease 0.4s;
@@ -516,7 +515,7 @@ Author URI: http://beloweb.ru/about
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
-  letter-spacing: 1.1; }
+  letter-spacing: 1.1px; }
 
 @media (min-width: 1200px) {
   .container {

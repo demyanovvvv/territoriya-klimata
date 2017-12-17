@@ -36,7 +36,7 @@
                     <div class="col-xl-3">
                         <div class="card offer border-0 p-2 ">
                             <div class="media">
-                                <img class="mr-3 mt-1 offer__img" src="images/gift.svg">
+                                <img class="mr-3 mt-1 offer__img" src="<?php bloginfo('stylesheet_directory'); ?>/images/gift.svg">
                                 <div class="media-body offer__text">
                                     Подарочные сертификаты
                                 </div>
@@ -46,7 +46,7 @@
                     <div class="col-xl-3">
                         <div class="card offer  border-0 p-2">
                             <div class="media">
-                                <img class="offer__img mr-3 mt-1" src="images/verified.svg">
+                                <img class="offer__img mr-3 mt-1" src="<?php bloginfo('stylesheet_directory'); ?>/images/verified.svg">
                                 <div class="media-body offer__text">
                                     Весь товар сертифицирован
                                 </div>
@@ -56,7 +56,7 @@
                     <div class="col-xl-3">
                         <div class="card border-0 p-2 offer">
                             <div class="media">
-                                <img class="mr-3 mt-1 offer__img" src="images/loop.svg">
+                                <img class="mr-3 mt-1 offer__img" src="<?php bloginfo('stylesheet_directory'); ?>/images/loop.svg">
                                 <div class="media-body offer__text">
                                     30 дней на обмен и возврат
                                 </div>
@@ -66,7 +66,7 @@
                     <div class="col-xl-3">
                         <div class="card border-0 p-2 offer">
                             <div class="media">
-                                <img class="mr-3 mt-2 offer__img" src="images/truck-fast.svg">
+                                <img class="mr-3 mt-2 offer__img" src="<?php bloginfo('stylesheet_directory'); ?>/images/truck-fast.svg">
                                 <div class="media-body offer__text">
                                     Быстрая доставка
                                 </div>
