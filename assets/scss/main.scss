@@ -1,6 +1,8 @@
 //fonts
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic');
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css');
 
 @import "blocks/colors"; //vars all colors
 @import "blocks/header";
@@ -9,6 +11,7 @@
 @import "blocks/catalog_section";
 @import "blocks/others_section";
 @import "blocks/footer";
+@import "blocks/single_body";
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: 'PT Sans', sans-serif;

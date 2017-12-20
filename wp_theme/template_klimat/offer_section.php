@@ -89,7 +89,7 @@
         </div>
 
         <div class="card border-0 mt-3 address">
-            <img class="card-img-top" src="images/staticmap.png" alt="">
+            <img class="card-img-top" src="<?php bloginfo('template_directory'); ?>/images/staticmap.png" alt="">
             <div class="card-body mt-3 p-2 address__text">
                 <b>Адрес: </b>
                 <p>Россия, Воронежская область, Воронеж, ул. Острогожская, 73А</p>

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic");
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css");
 .btn-primary {
   color: #fff;
   background-color: #03A9F4;
@@ -504,6 +506,130 @@
   color: #95989A;
   font-size: 14px;
   font-weight: 300; }
+
+.single_body__breadcrumb {
+  background: none;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  padding: 0; }
+  .single_body__breadcrumb-item a {
+    color: #757575;
+    -webkit-transition: all ease 0.8s;
+    -o-transition: all ease 0.8s;
+    transition: all ease 0.8s; }
+    .single_body__breadcrumb-item a:hover {
+      color: #B2B2B2;
+      text-decoration: none;
+      -webkit-transition: all ease 0.8s;
+      -o-transition: all ease 0.8s;
+      transition: all ease 0.8s; }
+  .single_body__breadcrumb-item.active {
+    color: #BDBDBD; }
+
+.single_body__h1 {
+  font-size: 28px; }
+
+.single_body__price_block {
+  display: inline-table;
+  -webkit-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+  -webkit-box-shadow: 0px 6px 18px rgba(33, 33, 33, 0.1);
+          box-shadow: 0px 6px 18px rgba(33, 33, 33, 0.1); }
+  .single_body__price_block:hover {
+    -webkit-box-shadow: 0px 8px 36px rgba(33, 33, 33, 0.3);
+            box-shadow: 0px 8px 36px rgba(33, 33, 33, 0.3);
+    -webkit-transition: all ease 0.8s;
+    -o-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+    -webkit-transform: translate(0, -1px);
+        -ms-transform: translate(0, -1px);
+            transform: translate(0, -1px); }
+  .single_body__price_block-price {
+    text-align: center;
+    display: block;
+    margin-top: -30px;
+    -webkit-border-radius: 3px 0 0 3px;
+            border-radius: 3px 0 0 3px; }
+    .single_body__price_block-price-num {
+      font-size: 32px;
+      padding: 5px 20px 5px 20px;
+      background: #FFEB3B;
+      -webkit-border-radius: 3px 0 0 3px;
+              border-radius: 3px 0 0 3px; }
+    .single_body__price_block-price-call {
+      background: #03A9F4;
+      padding: 3.7px;
+      margin-left: -5px;
+      -webkit-border-radius: 0 3px 3px 0;
+              border-radius: 0 3px 3px 0; }
+    .single_body__price_block-price__button {
+      margin-left: -20px;
+      padding-bottom: 10px; }
+      .single_body__price_block-price__button-call {
+        color: white;
+        border: none;
+        font-size: 14px;
+        font-weight: 300;
+        opacity: 1;
+        -webkit-transition: all ease 0.4s;
+        -o-transition: all ease 0.4s;
+        transition: all ease 0.4s; }
+        .single_body__price_block-price__button-call:hover {
+          color: white;
+          border: none;
+          opacity: 0.8;
+          -webkit-transition: all ease 0.8s;
+          -o-transition: all ease 0.8s;
+          transition: all ease 0.8s; }
+        .single_body__price_block-price__button-call-icon {
+          display: block;
+          margin: 0 auto;
+          background: url("/images/shopping_single.svg");
+          width: 15px;
+          height: 17.5px; }
+
+.single_body__content {
+  background: #F6F6F6; }
+  .single_body__content-descript {
+    font-size: 16px;
+    color: #757575;
+    letter-spacing: 1.1px;
+    line-height: 26px; }
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: #212121;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.nav-tabs {
+  border-bottom: none; }
+
+.nav-tabs .nav-link {
+  color: #757575;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  border: none;
+  -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+          border-top-right-radius: 0; }
+
+.nav-tabs .nav-link.active {
+  color: #212121;
+  background: none;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+          border-top-right-radius: 0; }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: 'PT Sans', sans-serif;

@@ -41,11 +41,11 @@
                             <img class="main_menu__nav-item-icon" src="images/view-list.svg" alt=""> Каталог
                         </a>
                         <div class="dropdown-menu border-0 main_menu__nav-dropcat" aria-labelledby="navbarDropdown">
-                        <?php if ( function_exists( 'wp_nav_menu' ) ){
-                        wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container_id' => 'dropdown_nav', 'container_class' => 'bottomMenu', 'fallback_cb'=>'primarymenu') );
-                        }else{
-                        primarymenu();
-                        }?>
+                        <?php if (function_exists('wp_nav_menu')) {
+    wp_nav_menu(array( 'theme_location' => 'primary-menu', 'container_id' => 'dropdown_nav', 'container_class' => 'bottomMenu', 'fallback_cb'=>'primarymenu'));
+} else {
+    primarymenu();
+}?>
                         </div>
                     </li>
                     <li class="main_menu__nav-item nav-item">

@@ -50,22 +50,22 @@
                                                 <div class="row">
                                                     <div class="col-xl-6">
                                                         <div class="footer-container__social">
-                                                            <a class="footer-container__social-link" href="#"> <img class="mr-3" src="images/vk.svg" </a>
+                                                            <a class="footer-container__social-link" href="#"> <img class="mr-3" src="<?php bloginfo('template_directory'); ?>/images/vk.svg" </a>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6">
                                                         <div class="footer-container__social">
-                                                            <a class="footer-container__social-link" href="#"> <img class="mr-3" src="images/facebook.svg"></a>
+                                                            <a class="footer-container__social-link" href="#"> <img class="mr-3" src="<?php bloginfo('template_directory'); ?>/images/facebook.svg"></a>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6">
                                                         <div class="footer-container__social">
-                                                            <a class="footer-container__social-link" href="#"><img class="mr-3" src="images/instagram.svg"></a>
+                                                            <a class="footer-container__social-link" href="#"><img class="mr-3" src="<?php bloginfo('template_directory'); ?>/images/instagram.svg"></a>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6">
                                                         <div class="footer-container__social">
-                                                            <a class="footer-container__social-link" href="#"><img class="mr-3" src="images/odnoklassniki.svg"></a>
+                                                            <a class="footer-container__social-link" href="#"><img class="mr-3" src="<?php bloginfo('template_directory'); ?>/images/odnoklassniki.svg"></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -119,6 +119,18 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    
+    <script type="text/javascript">
+        $('.multiple-items').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 3
+          });
+      </script>
 
     <?php wp_footer(); ?>
 </body>

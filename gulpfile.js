@@ -34,6 +34,31 @@ gulp.task('build', function () {
 		.pipe(gulp.dest('./build/images'));
 });
 
+// BUILD SINGLE
+gulp.task('build_single', function () {
+	gulp.src('./assets/scss/main.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer({
+            browsers: ['last 15 versions', 'Opera 12.1'],
+						cascade: true
+        }))
+		.pipe(rename('css/main.css'))
+    	.pipe(gulp.dest('build/'))
+	gulp.src('./assets/templates/*.html')
+		gulp.src(['./assets/templates/single.html'])
+			.pipe(fileinclude({
+				prefix: '@@',
+				basepath: './assets/templates/blocks/'
+			}))
+		.pipe(rename("single.html"))
+		.pipe(gulp.dest('build/'))
+	gulp.src('./assets/js/**/*.js')
+		.pipe(concat('js/scripts.js'))
+    	.pipe(gulp.dest('build/'))
+    gulp.src('./assets/images/*')
+		.pipe(gulp.dest('./build/images'));
+});
+
 // SERVER
 gulp.task('connect', function() {
   	connect.server({
@@ -42,6 +67,11 @@ gulp.task('connect', function() {
   });
 });
 gulp.task('server', ['connect', 'watch'], function () {
+	gulp.src("./build/")
+});
+
+// SERVER SINGLE
+gulp.task('server_single', ['connect', 'watch_single'], function () {
 	gulp.src("./build/")
 });
 
@@ -61,7 +91,6 @@ gulp.task('sass', function () {
 // JS
 gulp.task('js', function () {
 	gulp.src('./assets/js/**/*.js')
-		.pipe(uglify())
 		.pipe(concat('js/scripts.js'))
     	.pipe(gulp.dest('build/'))
 		.pipe(connect.reload());
@@ -80,6 +109,20 @@ gulp.task('html', function () {
 		.pipe(connect.reload());
 });
 
+// HTML SINGLE
+gulp.task('html_single', function () {
+	gulp.src('./assets/templates/*.html')
+		.pipe(rename("single.html"))
+		gulp.src(['./assets/templates/single.html'])
+			.pipe(fileinclude({
+		  		prefix: '@@',
+		  		basepath: './assets/templates/blocks/'
+			}))
+		.pipe(gulp.dest('build/'))
+		.pipe(connect.reload());
+});
+
+
 // IMAGES
 gulp.task('images', function () {
     gulp.src('./assets/images/*')
@@ -90,6 +133,14 @@ gulp.task('images', function () {
 // WATCH
 gulp.task('watch', function () {
 	gulp.watch('./assets/templates/**/*.html', ['html']);
+	gulp.watch('./assets/scss/**/*.scss', ['sass']);
+	gulp.watch('./assets/js/**/*.js', ['js']);
+	gulp.watch('./assets/images/*', ['images']);
+});
+
+// WATCH SINGLE
+gulp.task('watch_single', function () {
+	gulp.watch('./assets/templates/**/*.html', ['html_single']);
 	gulp.watch('./assets/scss/**/*.scss', ['sass']);
 	gulp.watch('./assets/js/**/*.js', ['js']);
 	gulp.watch('./assets/images/*', ['images']);

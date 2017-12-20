@@ -1,5 +1,3 @@
-<?php get_header(); ?>
-<div class="container">
 <div class="row">
     <div class="col-xl-9 mt-3 single_body">
         <nav aria-label="breadcrumb" role="navigation">
@@ -8,19 +6,17 @@
                     <a href="#">Главная</a>
                 </li>
                 <li class="breadcrumb-item single_body__breadcrumb-item">
-                    <a href="<?php $cat = get_the_category(); $cat = $cat[0]; echo get_category_link($cat->cat_ID);?>">
-                        <?php $category = get_the_category(); echo $category[0]->cat_name;?>
-                    </a>
+                    <a href="#">Кондиционеры</a>
                 </li>
-                <li class="breadcrumb-item single_body__breadcrumb-item active" aria-current="page"><?php the_title(); ?></li>
+                <li class="breadcrumb-item single_body__breadcrumb-item active" aria-current="page">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</li>
             </ol>
         </nav>
-        <h1 class="single_body__h1"><?php the_title(); ?></h1>
+        <h1 class="single_body__h1">Сплит-система (инвертор) Samsung AR09KSFPAWQNER</h1>
         <div class="card border-0 mt-3 px-3">
-            <?php echo get_the_post_thumbnail($page->ID, 'img-fluid img-thumbnail border-0 single_body__price_block-img pt-3') ?>
+            <img src="https://placeimg.com/840/250/people" alt="" class="single_body__price_block-img pt-3">
             <div class="single_body__price_block mx-auto">
                 <div class="single_body__price_block-price">
-                    <div class="d-inline-block single_body__price_block-price-num align-middle"><?php echo get_post_meta($post->ID, 'price', true) ?> руб.</div>
+                    <div class="d-inline-block single_body__price_block-price-num align-middle">35 990 руб.</div>
                     <div class="d-inline-block single_body__price_block-price-call align-middle">
                         <a class="btn single_body__price_block-price__button-call" href="#" role="button">
                             <span class="single_body__price_block-price__button-call-icon"></span>
@@ -43,8 +39,6 @@
                 </div>
             </div>
 
-            <div class="text-right mb-3"><?php echo do_shortcode('[mr_rating_result]'); ?></div>
-
             <div class="single_body__content row">
                 <ul class="nav nav-tabs col-xl-12" id="single_tabs" role="tablist">
                     <li class="nav-item">
@@ -58,18 +52,14 @@
                     </li>
                 </ul>
                 <div class="tab-content single_body__content-descript p-3 col-xl-12" id="single_tabsContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
-                        <?php while( have_posts() ) : the_post();
-                        the_content(); // выводим контент
-                        endwhile; ?>
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <?php echo get_post_meta($post->ID, 'characteristics', true) ?>
-                    </div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    <?php echo do_shortcode('[]'); ?>
-                    <?php comments_template(); ?>
-                </div>
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Electrolux вводит в ассортимент новую модель кондиционера на базе DC-инверторной технологии – Monaco Super DC-Inverter, воплотившую в себе лучшие технологические достижения бренда.
+
+                            Ключевое преимущество модели – высокий уровень сезонной энергоэффективности (SEER=5,6; класс «А+»). Это означает, что прибор производит в 5,6 раз больше холода, чем потребляет электроэнергии. Сплит-система соответствует самым строгим стандартам энергоэффективности, принятым в Европе в 2013 г. По сравнению с традиционными инверторными сплит-системами, кондиционер потребляет на 30% меньше электроэнергии, отличаясь более стабильной работой. В режиме ожидания потребление энергии составляет всего 0,5 Вт.
+                            
+                            Прибор создает комфортные условия в помещении в рекордно быстрые сроки, охлаждая воздух на 40% быстрее, чем стандартные кондиционеры. 
+                            Кроме того, Monaco Super DC-Inverter может функционировать в режиме обогрева при низких температурах наружного воздуха (до -15°С). Это позволяет прибору обогревать помещение в период межсезонья. Работая по принципу теплового насоса, Monaco Super DC-Inverter на каждый киловатт тепла потребляет менее 270 Вт электроэнергии (SCOP=3,8), что в 4 раза эффективнее бытовых электрообогревателей.</div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Характеристики</div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Отзывы</div>
                 </div>
             </div>
     </div>
@@ -95,5 +85,3 @@
     </div>
 </div>
 </div>
-</div>
-<?php get_footer(); ?>
