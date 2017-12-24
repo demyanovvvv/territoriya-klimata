@@ -110,18 +110,6 @@ register_sidebar(array(
 'after_title' => '</h2>',
 ));
 
-function edit_admin_menus()
-{
-    global $menu;
-    global $submenu;
-  
-    $menu[25][0] = 'Отзывы'; // Изменить комментарии на отзывы
-$menu[5][0] = 'Товары'; // Изменить Записи на Лошади
-    $submenu['edit.php'][5][0] = 'Все товары';
-    $submenu['edit.php'][10][0] = 'Добавить товар';
-}
-add_action('admin_menu', 'edit_admin_menus');
-
 /*******************************
 Навигация
 ********************************

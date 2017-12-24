@@ -145,3 +145,25 @@
         text-decoration: none;
     }
 }
+
+.cat-product__reviews .glsr-summary [class*=glsr-star-] {
+    width: 20px;
+    height: 20px;
+    background-size: 18px;
+}
+
+.cat-product__reviews .glsr-summary-rating {
+  float: right;
+  line-height: 1.25;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
+  color: #BDBDBD;
+  font-weight: 600;
+  background: none;
+}
+
+
+.cat-product__reviews .glsr-summary {
+  text-align: right;
+}

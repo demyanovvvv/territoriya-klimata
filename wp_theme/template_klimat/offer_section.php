@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="card offer-product border-0 mt-3">
-                    <a href="#">
+                    <a href="/catalog/kondicionery/">
                         <img class="card-img-top offer-product__img" src="https://placeimg.com/870/190/people" alt="">
                         <span class="offer-product__title">Кондиционеры</span>
                     </a>
@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-xl-5">
                 <div class="card offer-product border-0 mt-3">
-                    <a href="#">
+                    <a href="/catalog/uvlazhniteli/">
                         <img class="card-img-top offer-product__img" src="https://placeimg.com/330/190/people" alt="">
                         <span class="offer-product__title">Увлажнители</span>
                     </a>
@@ -22,7 +22,7 @@
             </div>
             <div class="col-xl-7">
                 <div class="card offer-product  border-0 mt-3">
-                    <a href="#">
+                    <a href="/catalog/teplovye-pushki/">
                         <img class="card-img-top offer-product__img" src="https://placeimg.com/470/190/people" alt="">
                         <span class="offer-product__title">Тепловые пушки</span>
                     </a>
@@ -84,7 +84,7 @@
                     <span>+7 (473) 2-600-600</span>
                     <span>+7 (473) 2-600-600</span>
                 </p>
-                <button class="btn btn-primary float-right" type="submit">Заказать звонок</button>
+                <button data-toggle="modal" data-target="#phoneCall" class="btn btn-primary float-right" type="submit">Заказать звонок</button>
             </div>
         </div>
 
