@@ -161,27 +161,26 @@
     });
 </script>
 
-    <?php $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1, 'category_name' => 'kondicionery')); ?>
-    <?php if ($wpb_all_query->have_posts()) : ?>
-    <?php while ($wpb_all_query->have_posts()) : $wpb_all_query->the_post(); ?>
-    <script>
-        $('#modal-zakaz-<?php echo get_the_ID(); ?>').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget) // Button that triggered the modal
-            var recipient = button.data('whatever') // Extract info from data-* attributes
-            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-            var modal = $(this)
-            modal.find('.modal-title').text('Заказать ' + recipient)
-            modal.find('.modal-body textarea').text('Хочу заказать ' + recipient)
-            modal.find('.modal-body .hiddeninput-title-product input').text('Заказали:\n' + recipient +
-                '\nCсылка: <?php the_permalink(); ?>')
-        })
-    </script>
+<?php if (have_posts()) : ?>
+<?php while (have_posts()) : the_post(); ?>
+<script>
+    $('#modal-zakaz-<?php echo get_the_ID(); ?>').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var recipient = button.data('whatever') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        modal.find('.modal-title').text('Заказать ' + recipient)
+        modal.find('.modal-body textarea').text('Хочу заказать ' + recipient)
+        modal.find('.modal-body .hiddeninput-title-product input').text('Заказали:\n' + recipient +
+            '\nCсылка: <?php the_permalink(); ?>')
+    })
+</script>
 
-    <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
-    <?php endif; ?>
+<?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
+<?php endif; ?>
 
-    </body>
+</body>
 
-    </html>
+</html>

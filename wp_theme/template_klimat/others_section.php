@@ -50,6 +50,26 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Modal zakaz -->
+                        <div class="modal fade" id="modal-zakaz-<?php echo get_the_ID(); ?>" tabindex="-1" role="dialog" aria-labelledby="modal-zakaz-<?php get_the_ID(); ?>Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modal-zakaz-<?php echo get_the_ID(); ?>Label">Заказ продукта
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <?php echo do_shortcode('[contact-form-7 id="75" title="Заказ продукта"]'); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
                         <?php else : ?>
@@ -113,6 +133,26 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Modal zakaz -->
+                        <div class="modal fade" id="modal-zakaz-<?php echo get_the_ID(); ?>" tabindex="-1" role="dialog" aria-labelledby="modal-zakaz-<?php get_the_ID(); ?>Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modal-zakaz-<?php echo get_the_ID(); ?>Label">Заказ продукта
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <?php echo do_shortcode('[contact-form-7 id="75" title="Заказ продукта"]'); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
                         <?php else : ?>

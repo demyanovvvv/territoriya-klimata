@@ -27,7 +27,7 @@
             <div class="row ">
                 <?php
              $args = array(); // подготовим массив
-             $args['meta_query'] = array('relation' => 'OR'); // отношение между условиями, у нас это "И то И это", можно ИЛИ(OR)
+             $args['meta_query'] = array('relation' => 'AND'); // отношение между условиями, у нас это "И то И это", можно ИЛИ(OR)
              global $wp_query; // нужно заглобалить текущую выборку постов
          
              if ($_GET['power_ot'] != '' || $_GET['power_do'] != '') { // если передано поле "Цена от" или "Цена до"
@@ -127,6 +127,21 @@
                         </div>
                     </div>
 
+                    <script>
+                        $('#modal-zakaz-<?php echo get_the_ID(); ?>').on('show.bs.modal', function (event) {
+                            var button = $(event.relatedTarget) // Button that triggered the modal
+                            var recipient = button.data('whatever') // Extract info from data-* attributes
+                            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                            var modal = $(this)
+                            modal.find('.modal-title').text('Заказать ' + recipient)
+                            modal.find('.modal-body textarea').text('Хочу заказать ' + recipient)
+                            modal.find('.modal-body .hiddeninput-title-product input').text('Заказали:\n' +
+                                recipient +
+                                '\nCсылка: <?php the_permalink(); ?>')
+                        })
+                    </script>
+
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
                     <?php else : ?>
@@ -141,4 +156,69 @@
     <?php get_template_part('sort_section'); ?>
 
 </div>
+
 <?php get_footer(); ?>
+
+<?php
+             $args = array(); // подготовим массив
+             $args['meta_query'] = array('relation' => 'AND'); // отношение между условиями, у нас это "И то И это", можно ИЛИ(OR)
+             global $wp_query; // нужно заглобалить текущую выборку постов
+         
+             if ($_GET['power_ot'] != '' || $_GET['power_do'] != '') { // если передано поле "Цена от" или "Цена до"
+                 if ($_GET['power_ot'] == '') {
+                     $_GET['power_ot'] = 0;
+                 } // если "Цена от" пустое, то значит от 0 и выше
+                 if ($_GET['power_do'] == '') {
+                     $_GET['power_do'] = 9999999;
+                 } // если "Цена до" пустое, то будет до 9999999
+                $args['meta_query'][] = array( // пешем условия в meta_query
+                    'key' => 'power', // название произвольного поля
+                    'value' => array( (int)$_GET['power_ot'], (int)$_GET['power_do'] ), // переданные значения ОТ и ДО для интервала передаются в массиве
+                    'type' => 'numeric', // тип поля - число
+                    'compare' => 'BETWEEN' // тип сравнения, здесь это BETWEEN - т.е. между "Цены от" и до "Цены до"
+                    );
+             }
+
+             if ($_GET['price_ot'] != '' || $_GET['price_do'] != '') { // если передано поле "Цена от" или "Цена до"
+                 if ($_GET['price_ot'] == '') {
+                     $_GET['price_ot'] = 0;
+                 } // если "Цена от" пустое, то значит от 0 и выше
+                 if ($_GET['price_do'] == '') {
+                     $_GET['price_do'] = 9999999;
+                 } // если "Цена до" пустое, то будет до 9999999
+                 $args['meta_query'][] = array( // пешем условия в meta_query
+                     'key' => 'price', // название произвольного поля
+                     'value' => array( (int)$_GET['price_ot'], (int)$_GET['price_do'] ), // переданные значения ОТ и ДО для интервала передаются в массиве
+                     'type' => 'numeric', // тип поля - число
+                     'compare' => 'BETWEEN' // тип сравнения, здесь это BETWEEN - т.е. между "Цены от" и до "Цены до"
+                     );
+             }
+                     
+             query_posts(array_merge($args, $wp_query->query));
+
+            $wpb_all_query = new WP_Query($args); ?>
+    <?php if ($wpb_all_query->have_posts()) : ?>
+    <?php while ($wpb_all_query->have_posts()) : $wpb_all_query->the_post(); ?>
+
+    <script>
+        $('#modal-zakaz-<?php echo get_the_ID(); ?>').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text('Заказать ' + recipient)
+            modal.find('.modal-body textarea').text('Хочу заказать ' + recipient)
+            modal.find('.modal-body .hiddeninput-title-product input').text('Заказали:\n' +
+                recipient +
+                '\nCсылка: <?php the_permalink(); ?>')
+        })
+    </script>
+
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
+    <?php else : ?>
+    <p>
+        <?php _e('Извините, нет записей, соответствуюших Вашему запросу.'); ?>
+    </p>
+    <?php endif; ?>

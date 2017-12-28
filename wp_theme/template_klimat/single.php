@@ -22,9 +22,9 @@
             </h1>
             <div class="card border-0 mt-3 px-3">
                 <?php if ( get_the_post_thumbnail($page->ID) ) : ?>
-                <?php echo get_the_post_thumbnail($page->ID, 'img-fluid img-thumbnail border-0 single_body__price_block-img pt-3') ?>
+                <?php echo get_the_post_thumbnail($page->ID, 'img-fluid img-thumbnail border-0 single_body__price_block-img pt-3  mx-auto') ?>
                 <?php else: ?>
-                <img src="https://placeimg.com/840/250/tech/grayscale" class="img-fluid img-thumbnail border-0 single_body__price_block-img pt-3">
+                <img src="https://placeimg.com/840/250/tech/grayscale" class="img-fluid img-thumbnail border-0 single_body__price_block-img pt-3  mx-auto">
                 <?php endif; ?>
                 <div class="single_body__price_block mx-auto">
                     <div class="single_body__price_block-price">
@@ -103,7 +103,7 @@
                 <div class="card-body mt-3 p-2 address__text">
                     <b>Адрес: </b>
                     <p>Россия, Воронежская область, Воронеж, ул. Острогожская, 73А</p>
-                    <button class="btn btn-primary float-right" type="submit">Смотреть на карте</button>
+                    <a href="https://www.google.ru/maps/place/%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6,+%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB./@51.6936647,39.0510767,10z/data=!3m1!4b1!4m5!3m4!1s0x413b2f5ce874e813:0x48d94c0efba762bd!8m2!3d51.6754966!4d39.2088823" class="btn btn-primary float-right">Смотреть на карте</a>
                 </div>
             </div>
         </div>

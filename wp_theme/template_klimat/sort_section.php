@@ -18,7 +18,7 @@
                                     </select>
                                     <span class="form-sort__end">до</span>
                                     <select class="custom-select mb-2 mr-xl-2 mb-xl-0 form-sort__select" id="inlineFormCustomSelect" name="power_do">
-                                        <option value="0" selected>0 кВт</option>
+                                        <option value="999999" selected>0 кВт</option>
                                         <option value="5.8">5.8 кВт</option>
                                         <option value="6.3">6.3 кВт</option>
                                         <option value="6.7">6.7 кВт</option>
@@ -35,7 +35,7 @@
                                     </select>
                                     <span class="form-sort__end">до</span>
                                     <select class="custom-select mb-2 mr-xl-2 mb-xl-0 form-sort__select" id="inlineFormCustomSelect" name="price_do">
-                                        <option value="0" selected>0 руб.</option>
+                                        <option value="999999" selected>0 руб.</option>
                                         <option value="12200">12 200 руб.</option>
                                         <option value="15600">15 600 руб.</option>
                                         <option value="17000">17 000 руб.</option>
